@@ -1,0 +1,51 @@
+
+/* 
+    Created on : 4 feb 2024, 22:25:26
+    Author     : FamMuñozAguilar
+*/
+footer p{
+    background-color: purple;
+    color: white;     
+}
+h1,h2{
+    text-align: left;    
+}
+
+h1{
+    background-color: purple;
+    color: white;   
+    font-size: 20px;
+}
+
+h2{
+    background-color: peachpuff;
+    color: palevioletred;  
+    font-size: 24px;
+}
+
+.aviso{
+    
+    color: black;         
+}
+#btnAlgo{
+    
+}
+
+table{
+    width: 90%;
+}
+thead tr{
+    background-color: black;
+    color: wheat;        
+}
+
+tbody tr:nth-child(odd){
+    background-color: blue;
+    color: white;
+}
+
+tbody tr:nth-child(even){
+    background-color: black;
+    color: white;
+}
+

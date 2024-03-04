@@ -1,0 +1,80 @@
+
+<html>
+    <head>
+        <title>Pet Shop Store</title>
+        <meta charset="UTF-8">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header class="header">            
+            <nav class="nav">
+                <h1><a href="index.html"class="nav-link logo">Pet Shop Store</a></h1>              
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a href="ubicacion.html"class="nav-link nav-menu-link" >&triangleleft;</a></li>
+                    <li class="nav-menu-item"><a href="index.html"class="nav-link nav-menu-link">&triangleright;</a></li>
+                    <li class="nav-menu-item"><a href="grooming.html"class="nav-link nav-menu-link"></a></li>
+                    <li class="nav-menu-item"><a href="grooming.html"class="nav-link nav-menu-link">Grooming</a></li>
+                    <li class="nav-menu-item"><a href="funeraria.html"class="nav-link nav-menu-link">Funeraria</a></li>
+                    <li class="nav-menu-item"><a href="especialistas.html"class="nav-link nav-menu-link">Especialistas</a></li>
+                    <li class="nav-menu-item"><a href="hotel.html"class="nav-link nav-menu-link">Hotel</a></li>
+                    <li class="nav-menu-item"><a href="registro.html"class="nav-link nav-menu-link">Registro</a></li>
+                    <li class="nav-menu-item"><a href="ubicacion.html"class="nav-link nav-menu-link">Ubicación</a></li>
+                    <li class="nav-menu-item"><a href="adopciones.html"class="nav-link nav-menu-link">Adopciones</a></li>
+                </ul>
+                                                       
+            </nav>
+        </header>
+        <aside>
+            <h2 class="noticia">Registro de adopción</h2>
+            <br>
+            <p>Ayudanos a encontrarle un nuevo hogar a nuestros amiguitos</p>
+            <br>
+        </aside>
+        <section>
+            <article>
+                <h3>Registro preliminar</h3>
+                <form action="/usuario/registro" method="POST">                     
+                    Nombre del adoptante: <input type="text" name="nombre" value="" size="35" /><br>
+                    Cédula: <input type="number" name="cedula" value="" /><br>
+                    Teléfono: <input type="number" name="telefono" value="" /><br>
+                    Correo del adoptante: <input type="email" name="nombre" placeholder="correo@correo.com" size="35" /><br>                    
+                    Fecha prevista para la adopción <input type="date" name="fAdopt" value="0" /><br>
+                    Foto:<input type="file" name="foto" accept="image/*" /><br>
+                    Raza: <select name="raza">
+                        <option value="0" >Perro</option>
+                        <option value="1" >Gato</option>
+                        <option value="2" >Ave</option>
+                        <option value="3" >Reptil</option>
+                        <option value="4" >Equino</option>
+                    </select><br>
+                    Tengo un lugar amplio para mantener a la nueva mascota<input type="radio" name="zona" value="1" /> Mi espacio es muy limitado<input type="radio" name="zona" value="2" /><br>
+                    Tengo la solvencia económica para mantener a la mascota que quiero adoptar  <input type="checkbox" name="solvencia" /><br>      
+                    
+                    <input type="submit" value="registro" name="btnRegistro" />
+                    
+                </form>
+            </article>
+            <br>
+            <br>
+            
+            <article>
+                </hr>
+                <h2>¡Gracias por querer brindar una segunda oportunidad!</h2>
+                <figure>
+                    <img src="Imagenes/Adopcion.png" alt="" style="width: 500px;height: 350px"/>
+                                   
+                </figure>
+                
+            </article> 
+           
+            <br>
+            <br>
+        </section>
+    
+            <p>Derechos reservados &copy;2023</p>
+        </footer>
+    </body>
+</html>
+
+    
