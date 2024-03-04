@@ -1,34 +1,35 @@
-
 /* 
-    Created on : 4 feb 2024, 22:25:26
-    Author     : FamMuñozAguilar
+    Created on : 4 mar 2024, 17:03:46
+    Author     : G4
 */
+
 footer p{
-    background-color: purple;
-    color: white;     
+    background-color: teal;
+    color:white;
 }
+
 h1,h2{
-    text-align: left;    
+    text-align: left;
 }
 
 h1{
     background-color: purple;
-    color: white;   
+    color: white;
     font-size: 20px;
 }
 
 h2{
     background-color: peachpuff;
-    color: palevioletred;  
+    color: palevioletred;
     font-size: 24px;
 }
 
 .aviso{
-    
-    color: black;         
+    color: black;
 }
+
 #btnAlgo{
-    
+
 }
 
 table{
@@ -36,7 +37,7 @@ table{
 }
 thead tr{
     background-color: black;
-    color: wheat;        
+    color: wheat;
 }
 
 tbody tr:nth-child(odd){

@@ -1,7 +1,6 @@
-
 /* 
-    Created on : 4 feb 2024, 22:31:48
-    Author     : FamMuñozAguilar
+    Created on : 4 mar 2024, 17:03:46
+    Author     : G4
 */
 
 *{
@@ -10,12 +9,12 @@
 }
 
 body{
-    font-family: cursive;
+    font-family: sans-serif;
     padding: 100px 20px 0;
 }
 
 .header{
-    background-color: plum;
+    background-color: teal;
     height: 80px;
     position: fixed;
     width: 100%;
@@ -67,3 +66,7 @@ body{
 
 
 
+
+.noticia {
+
+}

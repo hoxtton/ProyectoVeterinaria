@@ -8,13 +8,13 @@
 		<version>3.2.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ProyectoTiendaG4</groupId>
-	<artifactId>ProyectoTiendaG4</artifactId>
+	<groupId>com.ProyectoTiendaVeterinaria</groupId>
+	<artifactId>ProyectoVeterinaria</artifactId>
 	<version>1</version>
 	<name>ProyectoTiendaVeterinaria</name>
-	<description>ProyectoG4DesarrolloWeb</description>
+	<description>Desarrollo de Aplicaciones Web y Patrones - Proyecto Grupo 4</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>20</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

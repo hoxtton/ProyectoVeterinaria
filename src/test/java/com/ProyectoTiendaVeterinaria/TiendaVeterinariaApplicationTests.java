@@ -1,10 +1,10 @@
-package com.TiendaMascotas_Tarea;
+package com.ProyectoTiendaVeterinaria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TiendaMascotasTareaApplicationTests {
+class TiendaVeterinariaApplicationTests {
 
 	@Test
 	void contextLoads() {
