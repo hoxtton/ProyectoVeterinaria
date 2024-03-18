@@ -3,9 +3,17 @@
     Author     : G4
 */
 
-footer p{
+footer{
     background-color: teal;
-    color:white;
+    color: white;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    font-size: 18px;
+    margin: 0;
 }
 
 h1,h2{
@@ -22,14 +30,6 @@ h2{
     background-color: peachpuff;
     color: palevioletred;
     font-size: 24px;
-}
-
-.aviso{
-    color: black;
-}
-
-#btnAlgo{
-
 }
 
 table{
@@ -50,3 +50,23 @@ tbody tr:nth-child(even){
     color: white;
 }
 
+.aviso{
+    color: red;
+    font-weight: bold;
+}
+
+.centrar{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.fila-horizontal {
+    display: flex;
+}
+
+.div-separado {
+    display: inline-block;
+    width: 250px;
+
+    margin-right: 10px;
+}

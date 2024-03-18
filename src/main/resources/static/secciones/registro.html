@@ -1,80 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Pet Shop Store</title>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>PetShop</title>
         <meta charset="UTF-8">
-        <link href="css/formato.css" rel="stylesheet" type="text/css"/>
-        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
-        <link rel="stylesheet" href="../css/menu.css" type="text/css">
-        <link rel="stylesheet" href="../css/menu.css" type="text/css"/>
-
+            <link href="../css/formato.css" rel="stylesheet" type="text/css"/>
+            <link href="../css/menu.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <header class="header">            
             <nav class="nav">
-                <h1><a href="index.html" class="nav-link logo">Pet Shop Store</a></h1>              
+                <h1><a href="home.html" class="nav-link logo">PetShop</a></h1>              
                 <ul class="nav-menu">
-                    <li class="nav-menu-item"><a href="grooming.html" class="nav-link nav-menu-link">Grooming</a></li>
-                    <li class="nav-menu-item"><a href="funeraria.html" class="nav-link nav-menu-link">Funeraria</a></li>
-                    <li class="nav-menu-item"><a href="especialistas.html" class="nav-link nav-menu-link">Especialistas</a></li>
-                    <li class="nav-menu-item"><a href="hotel.html" class="nav-link nav-menu-link">Hotel</a></li>
-                    <li class="nav-menu-item"><a href="registro.html" class="nav-link nav-menu-link">Registro</a></li>
-                    <li class="nav-menu-item"><a href="ubicacion.html" class="nav-link nav-menu-link">Ubicación</a></li>
-                    <li class="nav-menu-item"><a href="adopciones.html" class="nav-link nav-menu-link">Adopciones</a></li>
+                    <li class="nav-menu-item"><a href="tienda.html" class="nav-link nav-menu-link">Tienda</a></li>
+                    <li class="nav-menu-item"><a href="servicios.html" class="nav-link nav-menu-link">Servicios</a></li>
+                    <li class="nav-menu-item"><a href="conocenos.html" class="nav-link nav-menu-link">Conócenos</a></li>
+                    <li class="nav-menu-item"><a href="registro.html" class="nav-link nav-menu-link">Registrarse</a></li>
                 </ul>
-
             </nav>
         </header>
+
         <aside>
             <h2 class="noticia">Regístrate</h2>
-            <p>Sé parte de nuestra familia</p>
+            <br/>
         </aside>
+
         <section>
             <article>
-                <h3>Registro de clientes</h3>
+                <h3>Ingresa los siguientes datos:</h3>
+                <hr/>
+                <br/>
                 <form action="/usuario/registro" method="POST"> 
-                    Usuario: <input type="text" name="username" value="" size="15" required /><br>
-                    Contraseña: <input type="password" name="password" value="" size="10" /><br>
-                    Nombre del dueño: <input type="text" name="nombre" value="" size="35" /><br>
-                    Teléfono: <input type="number" name="telefono" value="" /><br>
-                    Correo del dueño: <input type="email" name="nombre" placeholder="correo@correo.com" size="35" /><br>
-                    Nombre Mascota: <input type="text" name="nombre_masc" value="" size="35" /><br>                    
-                    Fecha de nacimiento mascota: <input type="date" name="fNacimiento" value="" /><br>
-                    Foto:<input type="file" name="foto" accept="image/*" /><br>
-                    Raza: <select name="raza">
-                        <option value="0" >Perro</option>
-                        <option value="1" >Gato</option>
-                        <option value="2" >Ave</option>
-                        <option value="3" >Reptil</option>
-                        <option value="4" >Equino</option>
-                    </select><br>
-                    Convivo con otras mascotas<input type="radio" name="zona" value="1" /> Soy solo yo<input type="radio" name="zona" value="2" /><br>
-                    Deseo recibir información de promociones  <input type="checkbox" name="prom" /><br>      
-
-                    <input type="submit" value="registro" name="btnRegistro" />
-
+                    Nombre de usuario: <input type="text" name="username" value="" size="15" required /><br/><br/>
+                    Contraseña: <input type="password" name="password" value="" size="10" /><br/><br/>
+                    Nombre completo: <input type="text" name="nombre" value="" size="35" /><br/><br/>
+                    Teléfono: <input type="number" name="telefono" value="" /><br/><br/>
+                    Correo electrónico: <input type="email" name="email" placeholder="ejemplo@correo.com" size="35"/><br/><br/>
+                    Foto de perfil: <input type="file" name="foto" accept="image/*"/><br/><br/>
+                    Deseo recibir información sobre promociones  <input type="checkbox" name="prom" /><br/><br/>     
+                    <input type="submit" value="Registrarse" name="btnRegistro" />
                 </form>
             </article>
-            <br>
-            <br>
-
+            <br/>  
             <article>
-                <hr/>
-                <h2>Familia Pet Shop Store</h2>
                 <figure>
                     <img src="../imagenes/animales.jpg" alt="" style="width: 600px;height: 400px"/>
-
                 </figure>
-
             </article> 
-
-            <br>
-            <br>
         </section>
+        
         <footer>
-
-            <p>Derechos reservados &copy;2023</p>
+            <p>Derechos Reservados &copy; 2024</p>
         </footer>
+        
     </body>
 </html>
 
