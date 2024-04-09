@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <title>PetShop</title>
+        <meta charset="UTF-8"/>
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+        <script th:src="@{/js/rutinas.js}"></script>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script> 
+        <link href="../../static/css/formato.css" rel="stylesheet" type="text/css"/>
+        <link href="../../static/css/menu.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header th:fragment="header">
+            <nav class="nav">
+                <h1><a href="index.html" class="nav-link logo">PetShop</a></h1>
+                <ul class="nav-menu">
+                    <li class="nav-menu-item"><a href="tienda.html" class="nav-link nav-menu-link">Tienda</a></li>
+                    <li class="nav-menu-item"><a href="grooming.html" class="nav-link nav-menu-link">Grooming</a></li>
+                    <li class="nav-menu-item"><a href="funeraria.html" class="nav-link nav-menu-link">Funeraria</a></li>
+                    <li class="nav-menu-item"><a href="especialistas.html" class="nav-link nav-menu-link">Especialistas</a></li>
+                    <li class="nav-menu-item"><a href="hotel.html" class="nav-link nav-menu-link">Hotel</a></li>
+                    <li class="nav-menu-item"><a href="registro.html" class="nav-link nav-menu-link">Registro</a></li>
+                    <li class="nav-menu-item"><a href="ubicacion.html" class="nav-link nav-menu-link">Ubicación</a></li>
+                    <li class="nav-menu-item"><a href="adopciones.html" class="nav-link nav-menu-link">Adopciones</a></li>
+                </ul>
+            </nav>
+        </header>   
+        <footer th:fragment="footer">
+            <p>Derechos Reservados &COPY; 2024</p>
+        </footer>
+    </body>
+</html>
