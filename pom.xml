@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.2</version>
+        <version>3.2.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.ProyectoTiendaVeterinaria</groupId>
@@ -14,7 +14,7 @@
     <name>ProyectoTiendaVeterinaria</name>
     <description>Desarrollo de Aplicaciones Web y Patrones - Proyecto Grupo 4</description>
     <properties>
-        <java.version>19</java.version>
+        <java.version>20</java.version>
     </properties>
 	<dependencies>
 		<dependency>
@@ -45,12 +45,12 @@
                 <dependency>
                     <groupId>org.webjars</groupId>
                     <artifactId>bootstrap</artifactId>
-                    <version>5.3.2</version>
+                    <version>5.3.3</version>
                 </dependency>
                 <dependency>
                     <groupId>org.webjars</groupId>
                     <artifactId>font-awesome</artifactId>
-                    <version>6.4.2</version>
+                    <version>6.5.2</version>
                 </dependency>
                 <dependency>
                     <groupId>org.webjars</groupId>
