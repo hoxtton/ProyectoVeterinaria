@@ -1,0 +1,72 @@
+/* 
+    Created on : 4 mar 2024, 17:03:46
+    Author     : G4
+*/
+
+footer{
+    background-color: teal;
+    color: white;
+    position: absolute;
+    height: 95px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    font-size: 18px;
+    margin: 0;
+}
+
+h1,h2{
+    text-align: left;
+}
+
+h1{
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+}
+
+h2{
+    background-color: peachpuff;
+    color: palevioletred;
+    font-size: 24px;
+}
+
+table{
+    width: 90%;
+}
+thead tr{
+    background-color: black;
+    color: wheat;
+}
+
+tbody tr:nth-child(odd){
+    background-color: blue;
+    color: white;
+}
+
+tbody tr:nth-child(even){
+    background-color: black;
+    color: white;
+}
+
+.aviso{
+    color: red;
+    font-weight: bold;
+}
+
+.centrar{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.fila-horizontal {
+    display: flex;
+}
+
+.div-separado {
+    display: inline-block;
+    width: 250px;
+
+    margin-right: 10px;
+}
