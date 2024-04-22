@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>PetShop</title>
+    </head>
+    <body>
+
+        <header th:replace="~{layout/plantilla :: header}"/>
+
+        <section class="mt-5 text-center">
+            <div>
+                <img src="https://az505806.vo.msecnd.net/cms/59c63bc8-f4bc-4517-a0bf-7ff0e20280c8/23c59995-e4ce-4ff2-8662-ef9b10d421d1.jpg" class="img-fluid" alt="..." width="4000" height="1500">
+                <div/>
+                <section>
+
+                    <section class='mt-5'>
+                        <div class="col-md-5 pt-2">
+                            <h2>¿Quienes somos?</h2>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4 mt-2">
+                                    <img src="https://images.vexels.com/media/users/3/200146/isolated/preview/5f7c9d826e1bb9c75a84d12482f0abcb-ilustracion-de-perro-doberman-de-pie.png" alt="alt" width="400" height='400'/>
+                                </div>
+                                <div class="col-6">
+                                    <p class='text-start'>En PetShop, somos un equipo comprometido con el bienestar y la salud de las mascotas. Con una pasión compartida por los animales y una dedicación inquebrantable hacia su cuidado, nos enorgullecemos de ofrecer servicios veterinarios de alta calidad y atención personalizada para todas las necesidades de tus queridas mascotas.
+
+                                        Nuestro equipo está formado por veterinarios altamente capacitados y amantes de los animales, quienes se esfuerzan por proporcionar el mejor cuidado médico posible en un ambiente cálido y acogedor. Desde consultas de rutina hasta procedimientos quirúrgicos complejos, estamos aquí para ofrecer a tus mascotas la atención que se merecen en cada etapa de sus vidas.
+
+                                        En PetShop, nos dedicamos a establecer relaciones sólidas con nuestros clientes y a construir un vínculo de confianza mutua. Nos esforzamos por ser un recurso confiable y comprensivo para todas las preguntas y preocupaciones relacionadas con la salud y el bienestar de tus mascotas.
+
+                                        Ya sea que estés buscando servicios médicos, consejos de nutrición o simplemente un lugar donde tu mascota se sienta como en casa, en PetShop estamos aquí para ayudarte. ¡Confía en nosotros para cuidar de tus compañeros peludos como si fueran nuestros propios amigos de cuatro patas!</p>
+                                </div>
+                            </div>
+                    </section>
+
+                    <section class='mt-5 bg-primary-subtle'>
+                        <div class="col-md-5 pt-2">
+                            <h2>Nuestros Objetivos</h2>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4 mt-2">
+                                    <p class='text-start'>En PetShop, nuestro objetivo principal es proporcionar atención veterinaria de alta calidad, promover la educación sobre el cuidado adecuado de las mascotas, fomentar el bienestar animal y construir relaciones duraderas con nuestros clientes. Nos esforzamos por ofrecer servicios excepcionales, ser un recurso confiable para nuestros clientes y garantizar la salud y felicidad de todas las mascotas que atendemos.</p>
+                                </div>
+                                <div class="col-6 mx-5">
+                                    <img src="https://images.vexels.com/media/users/3/200146/isolated/preview/5f7c9d826e1bb9c75a84d12482f0abcb-ilustracion-de-perro-doberman-de-pie.png" alt="alt" width="400" height='400'/>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class='mt-5'>
+                        <div class="col-md-5 pt-2">
+                            <h2>Tienda</h2>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="https://images.vexels.com/media/users/3/200146/isolated/preview/5f7c9d826e1bb9c75a84d12482f0abcb-ilustracion-de-perro-doberman-de-pie.png" alt="alt" width="400" height='400'/>
+                                </div>
+                                <div class="col-6">
+                                    <p class='text-start'>En nuestra tienda, nos comprometemos a ofrecer una amplia gama de productos de alta calidad para el cuidado y el bienestar de tus mascotas. Nuestro objetivo es proporcionar a nuestros clientes opciones confiables y convenientes para satisfacer todas las necesidades de sus mascotas, desde alimentos y juguetes hasta accesorios y productos de cuidado. Nos esforzamos por ser un destino integral para todos los amantes de las mascotas, brindando una experiencia de compra agradable y satisfactoria.</p>
+                                    <button class='btn btn-primary'><a class='text-light link-underline' th:href="@{/tienda/productos}">Ir a la tienda</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <footer th:replace="~{layout/plantilla :: footer}"/>
+
+                    </body>
+                    </html>

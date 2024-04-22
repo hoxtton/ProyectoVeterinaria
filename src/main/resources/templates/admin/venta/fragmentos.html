@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>PetShop</title>
+    </head>
+    <body>
+        <section th:fragment="listadoVentas" id="ventas">
+            <div class="text-center ">
+                <table class="table table-hover mt-5">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>[[#{venta.precio}]]</th>         
+                            <th>[[#{venta.cantidad}]]</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="venta, contador : ${ventas}">
+                            <td>[[${venta.idVenta}]]</td>
+                            <td>[[${venta.precio}]]</td>
+                            <td>[[${venta.cantidad}]]</td>
+                            <td><a th:href="@{/admin/venta/eliminar/}+${venta.idVenta}" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i> Eliminar</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center p-2" th:if="${ventas == null or ventas.empty}">
+                <span class="fst-italic">[[#{lista.vacia}]]</span>
+            </div>
+        </section>
+    </body>
+</html>

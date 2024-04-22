@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+    xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>PetShop</title> 
+    </head>
+    <body>        
+        <header th:replace="~{layout/plantilla :: header}"/>
+        
+        
+        <div class="row m-5 justify-content-md-center">
+            <div class="col-md-4 pt-5">
+                <div class="card">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2>[[#{login.login}]]</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" th:action="@{/login}">
+                            <div class="row my-3 form-group">
+                                <label class="form-label" for="username"><i class="fas fa-user-lock"></i>[[#{login.username}]]</label>
+                                <input class='form-control' type="text" name="username"/>
+                            </div>
+                            <div class="row my-3 form-group">
+                                <label class="form-label" for="username">
+                                    <i class="fas fa-user-lock"></i>
+                                    [[#{login.password}]]</label>
+                                <input class='form-control' type="password" name="password"/>
+                            </div>
+                            <div class="card-footer col text-center">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> [[#{login.login}]]</button>
+                                <div class="row">
+                                    <div class="col d-grid">
+                                        <button class="btn btn-primary mt-2">
+                                            <a class="text-light" th:href="@{/registro/nuevo}"><i class="fa fa-user-plus"></i> [[#{accion.registrar}]]</a>
+                                        </button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <button class="btn btn-warning mt-2">
+                                            <a class="text-light" th:href="@{/registro/recordar}"><i class="fa fa-user-plus"></i> [[#{accion.recordar}]]</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+      
+        
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>

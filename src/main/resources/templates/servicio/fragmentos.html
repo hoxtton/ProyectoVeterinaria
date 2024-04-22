@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+        <section class="my-5" th:fragment="listado">
+            <div class="container-fluid">
+                <div class="text-center">
+                    <h2>Servicios</h2>
+                    <p>Servicios que ofrecemos</p>
+                </div>
+                <div class="row">
+                    <div class="col" th:each="s : ${servicios}">   
+                        <div class="card m-5">
+                            <div class="card-title text-center">
+                                <h2>[[${s.titulo}]]</h2>
+                            </div>
+                            <div class="card-body p-2 text-center">
+                                <img th:src="${s.rutaImagen}" alt="alt" width="200" height="200"/>
+                                <p>[[${s.descripcion}]]</p>
+                            </div>
+                            <div class="card-footer text-center">
+                                <a class="btn btn-primary" th:href="@{/servicio/servicio/}+${s.idServicio}">Mas informacion</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-5" th:fragment="servicio">
+            <div class="container-fluid">
+                <div class="text-center">
+                    <div class="card mx-5 px-5">
+                        <div class="card-title">
+                            <div class="text-center">
+                                <h2>[[${servicio.titulo}]]</h2>
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <img th:src="${servicio.rutaImagen}" alt="alt" width="200" height="200"/>
+                            <h2>Descripcion</h2>
+                            <p>[[${servicio.descripcion}]]</p>
+                        </div>
+                        <div class="card-footer"> 
+                            <a th:href="@{/servicio/listado}" class="btn btn-primary text-light">Regresar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+</html>

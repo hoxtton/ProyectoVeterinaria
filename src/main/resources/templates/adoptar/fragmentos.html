@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Petshop</title>
+    </head>
+    <body>
+        <section class="mt-5 text-center" th:fragment="header_imagen">
+            <div>
+                <img src="https://az505806.vo.msecnd.net/cms/59c63bc8-f4bc-4517-a0bf-7ff0e20280c8/23c59995-e4ce-4ff2-8662-ef9b10d421d1.jpg" class="img-fluid" alt="..." width="4000" height="1500">
+            </div>
+        </section>
+        
+        <section class="m-2" th:fragment="listadoMascotas">
+            <div class="container">
+                <div class="text-center py-2">
+                    <h2>Mascotas</h2>
+                </div>
+                <div class="row">
+                    <div class="col" th:each="m : ${mascotas}" th:if="${m.activo}">
+                        <div class="card">
+                            <div class="card-title text-center">
+                                <h2>[[${m.nombre}]]</h2> 
+                            </div>
+                            <div class="card-body text-center">
+                                <img th:src="${m.rutaImagen}" alt="alt" width="200" height="200"/>
+                                <div class="text-center">
+                                    <p>Edad: [[${m.edad}]] Meses</p>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <button class="btn btn-primary">
+                                    <a class="btn" th:href="@{/adoptar/mascota/}+${m.idMascota}">Más Información</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="mt-5" th:fragment="mascota">
+            <div class="container-fluid">
+                <div class="text-center">
+                    <div class="card mx-5 px-5">
+                        <div class="card-title">
+                            <div class="text-center">
+                                <h2>[[${mascota.nombre}]]</h2>
+                            </div>
+                        </div>
+                        <div class="card-body py-2">
+                            <img th:src="${mascota.rutaImagen}" alt="alt" width="200" height="200"/>
+                            <p>Edad: [[${mascota.edad}]]</p>
+                        </div>
+                        <div class="card-footer"> 
+                            <a th:href="@{/adoptar/mascotas}" class="btn btn-primary text-light">Regresar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+    </body>
+</html>

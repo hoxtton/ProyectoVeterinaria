@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>PetShop</title>
+    </head>
+    <body>
+        
+        <section th:fragment="botonesAgregar" class="">
+                    <div class="col-md-3 m-3 p-2">   
+                        <button 
+                            type="button" 
+                            class="btn btn-primary btn-block" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#agregarServicio">
+                            <i class="fas fa-plus"></i> [[#{servicio.agregar}]]
+                        </button>
+                    </div>
+        </section>
+
+        <section th:fragment="agregarServicio">
+            <div id="agregarServicio" 
+                 class="modal fade" 
+                 tabindex="-1" 
+                 aria-labelledby="exampleModalLabel" 
+                 aria-hidden="true">
+                <div class="modal-dialog modal-md">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title">[[#{servicio.agregar}]]</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> 
+                        <form th:action="@{/admin/servicio/guardar}" th:object="${servicio}"
+                              method="POST" class="was-validated" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="titulo">[[#{servicio.titulo}]]</label>
+                                    <input type="text" class="form-control" name="titulo" required="true"/>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="descripcion">[[#{servicio.descripcion}]]</label>
+                                    <textarea class="form-control" name="descripcion" required="true" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="imagen">[[#{servicio.imagen}]]</label>
+                                    <input class="form-control" type="file" name="imagenFile" required="true" onchange="readURL(this);"/>
+                                    <img id="blah" src="#" alt="your image" height="200"/>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section th:fragment="listadoServicios" id="servicios">
+            <div class="text-center ">
+                <table class="table table-hover mt-5">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>[[#{servicio.titulo}]]</th>         
+                            <th>[[#{servicio.descripcion}]]</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="servicio, contador : ${servicios}">
+                            <td>[[${servicio.idServicio}]]</td>
+                            <td>[[${servicio.titulo}]]</td>
+                            <td>[[${servicio.descripcion}]]</td>
+                                    <td><a th:href="@{/admin/servicio/eliminar/}+${servicio.idServicio}" class="btn btn-danger">
+                                            <i class="fas fa-trash"></i> Eliminar</a>
+                                        <a th:href="@{/admin/servicio/modificar/}+${servicio.idServicio}" class="btn btn-success">
+                                            <i class="fas fa-pencil"></i> Modificar</a></td>
+                                    </tr>
+                                    </tbody>
+                                    </table>
+                                    </div>
+                            <div class="text-center p-2" th:if="${servicios == null or servicios.empty}">
+                                <span class="fst-italic">[[#{lista.vacia}]]</span>
+                            </div>
+                                    </section>
+
+        
+        <section class="mt-5 p-5" th:fragment="editarServicio">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form method="POST"
+                          th:action="@{/admin/servicio/guardar}" 
+                          th:object="${servicio}"
+                          class="was-validated"                          
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="idServicio" th:field="*{idServicio}"/>
+                        <input type="hidden" name="rutaImagen" th:field="*{rutaImagen}"/>
+                        <div id=details>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header text-center">
+                                                <h4>[[#{accion.actualizar}]]</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="titulo">[[#{servicio.titulo}]]</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="titulo" th:field="*{titulo}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="detalle">[[#{servicio.descripcion}]]</label>
+                                                    <textarea class="form-control" name="descripcion" th:field="*{descripcion}" required="true" rows="3"></textarea>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="imagen">[[#{servicio.imagen}]]</label>
+                                                    <input class="form-control" type="file" name="imagenFile"
+                                                           onchange="readURL(this);" />
+                                                    <img id="blah" th:src="@{${servicio.rutaImagen}}" alt="your image" height="200"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                <div class="container py-4 mb-4 bg-light">
+                    <div class="row">
+                        <div class="col-md-4 d-grid">
+                            <a th:href="@{/admin/servicio/listado}" class="btn btn-primary">
+                                <i class="fas fa-arrow-left"></i> [[#{accion.regresar}]]
+                            </a>
+                        </div>
+                        <div class="col-md-4 d-grid">                                
+                            <a th:href="@{/admin/servicio/eliminar/}+${servicio.idServicio}"
+                               class="btn btn-danger">
+                                <i class="fas fa-trash"></i> [[#{accion.eliminar}]]
+                            </a>
+                        </div>
+                        <div class="col-md-4 d-grid">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-check"></i> [[#{accion.guardar}]]
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                            
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
